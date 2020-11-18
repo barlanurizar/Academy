@@ -1,0 +1,59 @@
+﻿@page
+@model AcademyEnterprise.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Employee.EmployeeName" class="control-label"></label>
+                <input asp-for="Employee.EmployeeName" class="form-control" />
+                <span asp-validation-for="Employee.EmployeeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.EmployeeCode" class="control-label"></label>
+                <input asp-for="Employee.EmployeeCode" class="form-control" />
+                <span asp-validation-for="Employee.EmployeeCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.Description" class="control-label"></label>
+                <input asp-for="Employee.Description" class="form-control" />
+                <span asp-validation-for="Employee.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.Salary" class="control-label"></label>
+                <input asp-for="Employee.Salary" class="form-control" />
+                <span asp-validation-for="Employee.Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.ImageUrl" class="control-label"></label>
+                <input asp-for="Employee.ImageUrl" class="form-control" />
+                <span asp-validation-for="Employee.ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.Category" class="control-label"></label>
+                <input asp-for="Employee.Category" class="form-control" />
+                <span asp-validation-for="Employee.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
